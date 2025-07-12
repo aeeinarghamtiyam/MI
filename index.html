@@ -6,6 +6,13 @@
     <title>آئین ارقام تیام | جایی که عددها معنا می‌گیرند</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- اضافه کردن EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("wP5mu5oZJ_qH6qag2"); // Public Key
+        })();
+    </script>
     <style>
         * {
             font-family: 'Vazirmatn', sans-serif;
@@ -294,7 +301,6 @@
             }
         }
         
-        /* Prevent horizontal scroll */
         .container-responsive {
             max-width: 100%;
             overflow-x: hidden;
@@ -312,7 +318,7 @@
                 <h2 class="text-2xl font-bold text-white">منو</h2>
                 <button onclick="toggleMobileMenu()" class="text-white">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
@@ -380,7 +386,7 @@
         </div>
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 floating-animation hidden sm:block">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </div>
     </section>
@@ -403,7 +409,7 @@
                 <div class="service-card card-hover bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 text-center">حسابداری و مالیات</h3>
@@ -415,7 +421,7 @@
                 <div class="service-card card-hover bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 text-center">مشاوره مالیاتی خصوصی</h3>
@@ -427,7 +433,7 @@
                 <div class="service-card card-hover bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 text-center">ثبت شرکت و کارت بازرگانی</h3>
@@ -439,7 +445,7 @@
                 <div class="service-card card-hover bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 text-center">مدارک معتبر فنی‌حرفه‌ای</h3>
@@ -451,7 +457,7 @@
                 <div class="service-card card-hover bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 text-center">دوره‌های آموزش حسابداری</h3>
@@ -463,7 +469,7 @@
                 <div class="service-card card-hover bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800 mb-3 sm:mb-4 text-center">مشاوره صنایع و معادن</h3>
@@ -493,7 +499,7 @@
                 <div class="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-lg card-hover">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">اعتماد</h3>
@@ -503,7 +509,7 @@
                 <div class="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-lg card-hover">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">تخصص</h3>
@@ -513,7 +519,7 @@
                 <div class="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-lg card-hover">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">پشتیبانی</h3>
@@ -523,7 +529,7 @@
                 <div class="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-lg card-hover">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 gold-gradient rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">دانش روز</h3>
@@ -573,7 +579,7 @@
                     <div class="text-center">
                         <div class="w-24 h-24 sm:w-32 sm:h-32 gold-gradient rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                             <svg class="w-12 h-12 sm:w-16 sm:h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                <path stroke-linecap="round" stroke-jointstyle="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                             </svg>
                         </div>
                         <p class="text-lg sm:text-xl text-gray-600 italic font-medium">
@@ -745,17 +751,18 @@
                 <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-6 sm:p-8 shadow-2xl border border-yellow-200">
                     <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">فرم تماس سریع</h3>
                     
-                    <form class="space-y-4 sm:space-y-6">
+                    <form id="contact-form" class="space-y-4 sm:space-y-6">
                         <div>
-                            <input type="text" placeholder="نام و نام خانوادگی" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors text-sm sm:text-base">
+                            <input type="text" id="user_name" name="user_name" placeholder="نام و نام خانوادگی" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors text-sm sm:text-base">
                         </div>
-                        
                         <div>
-                            <input type="tel" placeholder="شماره تماس" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors text-sm sm:text-base">
+                            <input type="email" id="user_email" name="user_email" placeholder="ایمیل" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors text-sm sm:text-base">
                         </div>
-                        
                         <div>
-                            <select class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors text-sm sm:text-base">
+                            <input type="tel" id="user_phone" name="user_phone" placeholder="شماره تماس" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors text-sm sm:text-base">
+                        </div>
+                        <div>
+                            <select id="service_type" name="service_type" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors text-sm sm:text-base">
                                 <option value="">نوع خدمت مورد نظر</option>
                                 <option value="accounting">حسابداری و مالیات</option>
                                 <option value="consultation">مشاوره مالیاتی</option>
@@ -764,15 +771,14 @@
                                 <option value="industry">مشاوره صنایع</option>
                             </select>
                         </div>
-                        
                         <div>
-                            <textarea placeholder="پیام شما..." rows="4" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors resize-none text-sm sm:text-base"></textarea>
+                            <textarea id="message" name="message" placeholder="پیام شما..." rows="4" class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-gray-300 border border-white border-opacity-30 focus:border-yellow-300 focus:outline-none transition-colors resize-none text-sm sm:text-base"></textarea>
                         </div>
-                        
                         <button type="submit" class="w-full gold-gradient text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base lg:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                             ارسال پیام
                         </button>
                     </form>
+                    <p id="form-message" class="text-center mt-4 hidden text-sm sm:text-base"></p>
                 </div>
             </div>
         </div>
@@ -930,6 +936,14 @@
             }
             return 'متوجه سوال شما نشدم. لطفاً درباره خدمات، آموزش یا تماس بپرسید!';
         }
-    </script>
-</body>
-</html>
+
+        // EmailJS Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // جلوگیری از رفرش صفحه
+
+            // گرفتن مقادیر ورودی
+            const name = document.getElementById('user_name').value.trim();
+            const email = document.getElementById('user_email').value.trim();
+            const phone = document.getElementById('user_phone').value.trim();
+            const serviceType = document.getElementById('service_type').value;
+            const message = document
